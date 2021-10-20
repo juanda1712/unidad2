@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="unidad2.Views.Welcome" BackgroundColor="SkyBlue">
+    <ContentPage.Content>
+        <StackLayout  Margin="20" Spacing="20" >
+
+            <Image  Source="background_circuit.png" WidthRequest="160"></Image>
+                        
+            <StackLayout Orientation="Horizontal">
+                <Label FontSize="14" Text="Nombre" FontAttributes="Bold" TextColor="Black" HorizontalOptions="Center"  VerticalOptions="Center"> </Label>
+                <Entry Placeholder="Nombre"  HorizontalOptions="FillAndExpand" VerticalOptions="Center"  TextColor="DarkGray" MaxLength="10" ></Entry>
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal">
+                <Label FontSize="14" Text="Apellido" FontAttributes="Bold" TextColor="Black" HorizontalOptions="Center"  VerticalOptions="Center"></Label>
+                <Entry Placeholder="Apellido"  HorizontalOptions="FillAndExpand" VerticalOptions="Center"  TextColor="DarkGray" MaxLength="10" ></Entry>
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal">
+                <Label FontSize="14" Text="Cedula" FontAttributes="Bold" TextColor="Black" HorizontalOptions="Center"  VerticalOptions="Center"></Label>
+                <Entry Placeholder="Cedula"  Keyboard="Numeric" HorizontalOptions="FillAndExpand" VerticalOptions="Center"  TextColor="DarkGray" MaxLength="10" ></Entry>
+            </StackLayout>
+
+            <Button  Text="ACEPTAR" FontAttributes="Bold" BackgroundColor="#00AE0C" CornerRadius="25"  TextColor="White" > </Button>
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
