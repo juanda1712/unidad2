@@ -134,6 +134,9 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\background_circuit.png" />
+    <BundleResource Include="Resources\prime.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Background.png" />
   </ItemGroup>
 </Project>

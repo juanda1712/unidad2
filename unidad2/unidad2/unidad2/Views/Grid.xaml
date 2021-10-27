@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="unidad2.Views.Grid" BackgroundImageSource="Background.png" >
+    <ContentPage.Content>
+
+
+        <Grid    RowSpacing="10" ColumnSpacing="10" >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />                       
+            </Grid.ColumnDefinitions>
+                                  
+            <Grid.RowDefinitions>
+                <RowDefinition  Height="*" />
+                <RowDefinition  Height="*" />
+                <RowDefinition  Height="*" />
+            </Grid.RowDefinitions>
+
+            <StackLayout Grid.Row="0" Grid.Column="0" BackgroundColor="AliceBlue" 
+                         Grid.ColumnSpan="2"  Grid.RowSpan="2" >              
+                <Label Text="Hola"></Label>                
+            </StackLayout>
+            
+            
+            <Button BackgroundColor="DodgerBlue" Grid.Row="0" Grid.Column="2"  Text="Button 0,2" ></Button>                 
+           
+            <Button BackgroundColor="DodgerBlue" Grid.Row="1" Grid.Column="2"  Text="Button 1,2" ></Button>
+            <Button BackgroundColor="DeepSkyBlue" Grid.Row="2" Grid.Column="0"  Text="Button 2,0" ></Button>
+            <Button BackgroundColor="LightBlue" Grid.Row="2" Grid.Column="1"  Text="Button 2,1" ></Button>
+            <Button BackgroundColor="DodgerBlue" Grid.Row="2" Grid.Column="2"  Text="Button 2,2" ></Button>
+
+
+
+        </Grid>
+
+
+    </ContentPage.Content>
+</ContentPage>

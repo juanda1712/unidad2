@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="unidad2.Views.Controles">
+    <ContentPage.Content>
+        <StackLayout Margin="30">
+
+            <StackLayout  VerticalOptions="Start" Margin="30,80,0,0" HorizontalOptions="Start">
+                <Image Source="prime.png" HeightRequest="160"  ></Image>
+            </StackLayout>
+
+            <BoxView 
+                BackgroundColor="Coral"  HeightRequest="2"  VerticalOptions="Center"
+                />
+
+            <!--<BoxView BackgroundColor="CornflowerBlue" WidthRequest="160"
+                     HeightRequest="160" VerticalOptions="Center" HorizontalOptions="Center" CornerRadius="50"
+                     ></BoxView>-->
+            
+            <!--<ActivityIndicator IsRunning="True" Color="DarkSlateBlue" />-->
+
+
+            <!--<Button Text="Login"  CornerRadius="30" BackgroundColor="GreenYellow" WidthRequest="150" HorizontalOptions="Center" >
+            </Button>
+
+            <Button Text="RD" WidthRequest="80" HeightRequest="80" CornerRadius="40" TextColor="White"
+                    VerticalOptions="Center" HorizontalOptions="Center" BackgroundColor="GreenYellow" ></Button>
+
+            <DatePicker FontSize="Medium" FontAttributes="Italic" MaximumDate="10/30/2021"  WidthRequest="150" HorizontalOptions="Center"
+                        MinimumDate="10/13/2021" Format="d" TextColor="Blue" ></DatePicker>
+
+
+            <Editor Placeholder="Editor" IsReadOnly="False"  AutoSize="TextChanges" TextTransform="Uppercase"
+                    TextColor="Black"  MaxLength="80" CharacterSpacing="5" IsSpellCheckEnabled="True"
+                    PlaceholderColor="LightSlateGray" />
+
+            <Entry  Placeholder="Entry" IsReadOnly="False"  TextTransform="Uppercase"
+                    TextColor="Black"  MaxLength="80"  IsSpellCheckEnabled="True"
+                    PlaceholderColor="LightSlateGray"  Keyboard="Email" ></Entry>
+
+            <Entry  Placeholder="Entry" IsReadOnly="False"  TextTransform="Uppercase"
+                    TextColor="Black"  MaxLength="80"  IsSpellCheckEnabled="True"
+                    PlaceholderColor="LightSlateGray"   ClearButtonVisibility="WhileEditing"> </Entry>
+
+            <Picker Title=" Seleccion" TitleColor="DarkGoldenrod" />
+            
+            <ProgressBar  Progress="1" ProgressColor="LightGreen" />-->
+
+            <!--<SearchBar Margin="0,20,0,10" Placeholder=" Busqueda" PlaceholderColor="DarkBlue" CancelButtonColor="Red"
+                       TextTransform="Uppercase" FontSize="Medium"   HorizontalOptions="Center"/>
+
+            <Slider Minimum="0" Maximum="10" ThumbColor="White" BackgroundColor="Coral"/>
+
+            <Stepper Minimum="0" Maximum="5" Increment="1"  BackgroundColor="LightBlue" />-->
+
+            <!--<StackLayout Orientation="Horizontal" Spacing="20" >
+                <Label Padding="10" Text="Recordar"></Label>
+                <Switch IsToggled="false"  OnColor="LawnGreen"  ThumbColor="White"/>
+            </StackLayout>
+
+            <TimePicker  HorizontalOptions="Center"  Format="T"  TextColor="DarkBlue" />-->
+
+            <WebView HeightRequest="400" Source="https://www.minijuegos.com/" />
+
+
+
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="unidad2.Views.CtlTableView">
+    <ContentPage.Content>
+        <StackLayout>
+
+            <TableView BackgroundColor="AliceBlue">
+                <TableRoot>
+                    <TableSection
+                        Title="Sonido" TextColor="DarkBlue">
+                        <SwitchCell Text="Llamadas"></SwitchCell>
+                        <SwitchCell Text="Mensajes"></SwitchCell>                         
+                    </TableSection>
+                    
+                    <TableSection Title="Imagenes">
+                        <TextCell TextColor="Black" Text="Config"></TextCell>
+                        <EntryCell Placeholder="Escriba su config"></EntryCell>                       
+                    </TableSection>
+
+                    <TableSection Title="Customers">
+                        <ViewCell>
+                            <StackLayout Margin="20">
+                                <Label Text="Cust"></Label>
+                                <Label Text="Cust2"></Label>
+                            </StackLayout>                            
+                        </ViewCell>
+                    </TableSection>
+                    
+                </TableRoot>
+            </TableView>
+
+
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

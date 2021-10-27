@@ -11,7 +11,7 @@ namespace unidad2
         {
             InitializeComponent();
 
-            MainPage = new Welcome();
+            MainPage = new Views.Grid();
         }
 
         protected override void OnStart()

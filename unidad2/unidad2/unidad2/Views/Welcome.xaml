@@ -1,29 +1,28 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="unidad2.Views.Welcome" BackgroundColor="SkyBlue">
+             x:Class="unidad2.Views.Welcome"  BackgroundImageSource="Background.png" >
     <ContentPage.Content>
-        <StackLayout  Margin="20" Spacing="20" >
+        <StackLayout Spacing="10" >
 
-            <Image  Source="background_circuit.png" WidthRequest="160"></Image>
-                        
-            <StackLayout Orientation="Horizontal">
-                <Label FontSize="14" Text="Nombre" FontAttributes="Bold" TextColor="Black" HorizontalOptions="Center"  VerticalOptions="Center"> </Label>
-                <Entry Placeholder="Nombre"  HorizontalOptions="FillAndExpand" VerticalOptions="Center"  TextColor="DarkGray" MaxLength="10" ></Entry>
+            <StackLayout  VerticalOptions="Start" Margin="30,80,0,0" HorizontalOptions="Start">
+                <Image Source="prime.png" WidthRequest="160" ></Image>
             </StackLayout>
 
-            <StackLayout Orientation="Horizontal">
-                <Label FontSize="14" Text="Apellido" FontAttributes="Bold" TextColor="Black" HorizontalOptions="Center"  VerticalOptions="Center"></Label>
-                <Entry Placeholder="Apellido"  HorizontalOptions="FillAndExpand" VerticalOptions="Center"  TextColor="DarkGray" MaxLength="10" ></Entry>
+            <StackLayout HorizontalOptions="Start" Margin="30,0,0,250">
+                <Label   HorizontalOptions="Start"  FontAttributes="Italic" TextColor="White" Text="Bienvenido a la clase de programación Movil " FontSize="Medium"  VerticalOptions="Start" >
+                </Label>
             </StackLayout>
 
-            <StackLayout Orientation="Horizontal">
-                <Label FontSize="14" Text="Cedula" FontAttributes="Bold" TextColor="Black" HorizontalOptions="Center"  VerticalOptions="Center"></Label>
-                <Entry Placeholder="Cedula"  Keyboard="Numeric" HorizontalOptions="FillAndExpand" VerticalOptions="Center"  TextColor="DarkGray" MaxLength="10" ></Entry>
-            </StackLayout>
+            <Button Text="Login"  CornerRadius="30" BackgroundColor="white" WidthRequest="150" HorizontalOptions="Center" >
+            </Button>
 
-            <Button  Text="ACEPTAR" FontAttributes="Bold" BackgroundColor="#00AE0C" CornerRadius="25"  TextColor="White" > </Button>
-            
+
+
         </StackLayout>
+
+
+
+
     </ContentPage.Content>
 </ContentPage>
