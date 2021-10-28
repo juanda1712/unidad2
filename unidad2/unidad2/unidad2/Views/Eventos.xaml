@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="unidad2.Views.Eventos">
+    <ContentPage.Content>
+        <StackLayout Margin="40" Spacing="30">
+
+            <StackLayout>
+                <Label  Text="Nombre" FontSize="Medium" FontAttributes="Bold"></Label>
+                <Entry x:Name="etyNombre" TextTransform="Uppercase"
+                       Placeholder="Ingrese su nombre" TextChanged="etyNombre_TextChanged" TextColor="Black"></Entry>
+            </StackLayout>
+
+            <StackLayout>
+                <Label  Text="Edad" FontSize="Medium" FontAttributes="Bold"></Label>
+                <Entry x:Name="etyEdad" Keyboard="Numeric"
+                       Placeholder="Ingrese su edad" TextColor="Black"></Entry>
+            </StackLayout>
+
+            <StackLayout>
+                <Label  Text="Genero" FontSize="Medium" FontAttributes="Bold"></Label>
+                <RadioButton x:Name="rbM" Content="Masculino" IsChecked="True" ></RadioButton>
+                <RadioButton x:Name="rbF" Content="Femenino" ></RadioButton>
+            </StackLayout>
+
+            <StackLayout>
+                <Label Text="¿Que tan feliz esta?" FontSize="Medium" FontAttributes="Bold" ></Label>
+            </StackLayout>
+            
+            <StackLayout Orientation="Horizontal" Spacing="10">
+                <Slider x:Name="sldFelicidad" Maximum="100" 
+                        WidthRequest="200" MinimumTrackColor="LightGray"
+                        MaximumTrackColor="Gold"
+                        ThumbColor="LightSlateGray"  ValueChanged="sldFelicidad_ValueChanged"></Slider>
+
+                <Label x:Name="lblValFelicidad"  Text="0" FontSize="Medium"  
+                       FontAttributes="Bold" ></Label>
+            </StackLayout>
+            
+            <StackLayout>
+                <Label x:Name="lblContador" TextColor="Purple" Margin="0,0,0,20" ></Label>
+                <Button Clicked="Button_Clicked" Text="Aceptar" BackgroundColor="LightSteelBlue" HorizontalOptions="Center" CornerRadius="30" VerticalOptions="Center" >
+                </Button>
+            </StackLayout>
+        
+            
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

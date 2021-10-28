@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="unidad2.Views.Login" BackgroundImageSource="Background.png">
+    <ContentPage.Content>
+
+        <Grid >
+
+            <Grid>
+                <Grid.RowDefinitions >
+                    <RowDefinition Height="Auto" ></RowDefinition>
+                    <RowDefinition Height="*" ></RowDefinition>
+                    <RowDefinition Height="Auto" ></RowDefinition>
+                </Grid.RowDefinitions>
+
+
+                <Image Grid.Row="0" Source="usr.png" WidthRequest="100" HeightRequest="100" Margin="0,50,0,50" ></Image>
+
+                <StackLayout Grid.Row="1" Margin="20,30,20,10" Spacing="15">
+
+                    <Entry Placeholder="Usuario" PlaceholderColor="SlateGray" TextColor="SlateGray"></Entry>
+                    <Entry Placeholder="Contraseña" PlaceholderColor="SlateGray" TextColor="SlateGray" ></Entry>
+                    <Button Text="Iniciar Sesión" BackgroundColor="White" Margin="0,15,0,0" CornerRadius="20" TextColor="#58AFDE" FontAttributes="Bold" FontSize="17"></Button>
+
+                    <StackLayout Orientation="Horizontal" Margin="15">
+                        <Label Text="¿Recuperar Contraseña?" TextColor="SlateGray" FontSize="17"></Label>
+                        <Label Text="Registrarse" TextColor="SlateGray" HorizontalOptions="EndAndExpand" FontSize="17"></Label>
+                    </StackLayout>
+                    
+                </StackLayout>
+
+                <Label Grid.Row="3"  Text="Programación móvil" TextColor="SlateGray" FontSize="27" FontAttributes="Bold" HorizontalTextAlignment="Center" Margin="0,50,0,0"></Label>
+            </Grid>
+
+
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
