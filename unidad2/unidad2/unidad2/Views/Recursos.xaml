@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:Fonts_ico ="clr-namespace:unidad2.Fonts" 
+             x:Class="unidad2.Views.Recursos"
+           >
+             
+    <ContentPage.Content>
+        <StackLayout>
+            
+        
+        <StackLayout Orientation="Horizontal" Margin="40">
+            <Label FontFamily="Icons"
+                   Text="&#xe804;"                               
+                   >             
+            </Label>
+            
+            <Label Text="Welcome to Xamarin.Forms"                 
+                   FontFamily="Great"/>
+        </StackLayout>
+
+            <StackLayout Orientation="Horizontal" Margin="40">
+                <Label FontFamily="Icons"
+                   Text="{x:Static Fonts_ico:Fonts.User}"                   
+                      >                 
+                </Label>
+
+                <Label Text="Welcome"                
+                   FontFamily="Great"/>
+            </StackLayout>
+
+            <StackLayout Style="{StaticResource StkBtn}">                
+                <Button Style="{StaticResource btnAceptar}"></Button>
+                <Button Style="{StaticResource btnCancelar}" ></Button>
+            </StackLayout>
+
+
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

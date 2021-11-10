@@ -11,7 +11,7 @@ namespace unidad2
         {
             InitializeComponent();
 
-            MainPage = new Views.Eventos();
+            MainPage = new NavigationPage(new Home());
         }
 
         protected override void OnStart()

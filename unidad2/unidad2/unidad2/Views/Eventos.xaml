@@ -33,7 +33,7 @@
                         MaximumTrackColor="Gold"
                         ThumbColor="LightSlateGray"  ValueChanged="sldFelicidad_ValueChanged"></Slider>
 
-                <Label x:Name="lblValFelicidad"  Text="0" FontSize="Medium"  
+                <Label x:Name="lblValFelicidad"  Text="" FontSize="Medium"  
                        FontAttributes="Bold" ></Label>
             </StackLayout>
             
@@ -42,9 +42,7 @@
                 <Button Clicked="Button_Clicked" Text="Aceptar" BackgroundColor="LightSteelBlue" HorizontalOptions="Center" CornerRadius="30" VerticalOptions="Center" >
                 </Button>
             </StackLayout>
-        
-            
-            
+                                
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

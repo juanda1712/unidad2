@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="unidad2.Views.Binding_Contex">
+    <ContentPage.Content>
+        <StackLayout Margin="40" Spacing="30">
+            <StackLayout Orientation="Horizontal" Spacing="10">
+                <Slider x:Name="sldFelicidad" Maximum="100" 
+                        WidthRequest="200" MinimumTrackColor="LightGray"
+                        MaximumTrackColor="Gold"
+                        ThumbColor="LightSlateGray" ></Slider>
+
+                <Label BindingContext="{x:Reference sldFelicidad}" x:Name="lblValFelicidad"  
+                       Text="{Binding Value , StringFormat= '{0:F0} %' }" FontSize="Medium"  
+                       FontAttributes="Bold" ></Label>
+            </StackLayout>
+
+            <StackLayout>
+                <Label  Text="Nombre" FontSize="Medium" FontAttributes="Bold"></Label>
+                <Entry x:Name="etyNombre" 
+                       Placeholder="Ingrese su nombre"  TextColor="Black"></Entry>
+            </StackLayout>
+
+            <StackLayout>
+                <Label BindingContext="{x:Reference etyNombre}" x:Name="lblContador" 
+                       Text="{x:Binding Text , StringFormat=' Hola {0} Buenas noches!' }"
+                       TextColor="Purple" FontFamily="Great" Margin="0,0,0,20" ></Label>                
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal">
+                <Label Text="¿Tienes Hijos?" FontFamily="Great"  FontSize="Medium"></Label>
+                <Switch x:Name="swHijos" HorizontalOptions="Start">                    
+                </Switch>
+            </StackLayout>
+
+            <StackLayout BindingContext="{x:Reference swHijos}"  IsVisible="{Binding IsToggled}">
+                <Label  Text="Cant de Hijos" FontSize="Medium" FontAttributes="Bold"></Label>
+                <Entry x:Name="etyHijos" 
+                       Placeholder="Ingrese la Cantidad"  TextColor="Black"></Entry>
+            </StackLayout>
+
+            <StackLayout>
+                <Button Text="Aceptar" BackgroundColor="LightSteelBlue" HorizontalOptions="Center" CornerRadius="30" VerticalOptions="Center" >
+                </Button>
+            </StackLayout>
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
