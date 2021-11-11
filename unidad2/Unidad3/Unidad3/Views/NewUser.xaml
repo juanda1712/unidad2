@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Unidad3.Views.NewUser">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition  Height="Auto"></RowDefinition>
+                <RowDefinition  Height="Auto"></RowDefinition>
+                <RowDefinition  Height="Auto"></RowDefinition>
+                <RowDefinition  Height="Auto"></RowDefinition>
+                <RowDefinition  Height="Auto"></RowDefinition>
+                <RowDefinition  Height="Auto"></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <StackLayout Grid.Row="1">
+                <Image Source="usr.png" HeightRequest="70" WidthRequest="90" ></Image>
+            </StackLayout>
+
+            <StackLayout Grid.Row="2" HorizontalOptions="Center">
+                <Label Text="Registro" ></Label>
+            </StackLayout>
+
+            <StackLayout Grid.Row="3" Margin="30,0,30,0" Orientation="Vertical" Spacing="5" >
+                <Label Text="Nombre"></Label>
+                <Entry Style="{StaticResource EtGeneral}" Text="{Binding NombreTxt}" Placeholder="Ingrese el Nombre"></Entry>
+            </StackLayout>
+
+            <StackLayout Grid.Row="4" Margin="30,0,30,0" Orientation="Vertical" Spacing="5" >
+                <Label Text="Usuario"></Label>
+                <Entry Style="{StaticResource EtGeneral}" Text="{Binding  UserTxt}" Placeholder="Ingrese el Usuario"></Entry>
+            </StackLayout>
+
+            <StackLayout Grid.Row="5" Margin="30,0,30,0" Orientation="Vertical" Spacing="5" >
+                <Label Text="Contraseña"></Label>
+                <Entry Style="{StaticResource EtGeneral}" Text="{Binding PasswordTxt }" Placeholder="Ingrese la Contraseña"></Entry>
+            </StackLayout>
+
+            <StackLayout Grid.Row="6" Margin="30,30,30,0" Orientation="Vertical" Spacing="5">
+                <Button Style="{StaticResource btnAceptar}" Command="{Binding RegisterCommand}" ></Button>
+            </StackLayout>
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

@@ -42,4 +42,13 @@
     </Style>
 
 
+    <Style x:Key="EtGeneral" TargetType="Entry">
+        <Setter Property="HorizontalOptions" Value="FillAndExpand"></Setter>
+        <Setter Property="FontSize" Value="Medium"></Setter>
+        <Setter Property="TextColor" Value="LightSlateGray"></Setter>
+        <Setter Property="ClearButtonVisibility" Value="WhileEditing"></Setter>
+    </Style>
+
+
+
 </ResourceDictionary>

@@ -26,7 +26,7 @@
 
                     <StackLayout Orientation="Horizontal" Margin="15">
                         <Label Text="¿Recuperar Contraseña?" TextColor="SlateGray" FontSize="17"></Label>
-                        <Label Text="Registrarse" TextColor="SlateGray" HorizontalOptions="EndAndExpand" FontSize="17"></Label>
+                        <Button Text="Registrarse" Clicked="Button_Clicked" BackgroundColor="{StaticResource Aux1}"  TextColor="White" HorizontalOptions="EndAndExpand" FontSize="17"></Button>
                     </StackLayout>
 
                 </StackLayout>

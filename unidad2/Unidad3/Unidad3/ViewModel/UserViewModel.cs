@@ -3,18 +3,19 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows.Input;
+using Unidad3.Models;
 using Xamarin.Forms;
 
 namespace Unidad3.ViewModel
 {
-    class LoginViewModel : BaseViewModel
+    class UserViewModel:BaseViewModel
     {
-
         #region Atributos
         public string user;
         public string password;
+        public string nombre;
         #endregion
-                
+
 
 
         #region Prop
@@ -36,16 +37,24 @@ namespace Unidad3.ViewModel
             set { SetValue(ref this.password, value); }
         }
 
+        public string NombreTxt
+        {
+            get
+            {
+                return this.nombre;
+            }
+            set { SetValue(ref this.nombre, value); }
+        }
         #endregion
 
 
         #region Commands
 
-        public ICommand LoginCommand
+        public ICommand RegisterCommand
         {
             get
             {
-                return new RelayCommand(LoginMethod);
+                return new RelayCommand(RegisterMethod);
             }
             set { }
         }
@@ -55,22 +64,19 @@ namespace Unidad3.ViewModel
 
         #region Methods
 
-        public async void LoginMethod()
+        public async void RegisterMethod()
         {
+            var userMod = new UserModel();
+            userMod.Nombre = nombre;
+            userMod.Usuario = user;
+            userMod.Pw = password;
+            await App.Db.SaveUserModelAsync(userMod);
 
+            await Application.Current.MainPage.DisplayAlert("OK", nombre + " Registro Exitoso en Programación Movil", "OK");
 
-            if(UserTxt == "ADMIN" && PasswordTxt == "12345")
-            {
-                await Application.Current.MainPage.DisplayAlert("WELCOME", "Bienvenido...", "OK");
-            }
-            else
-            {
-                await Application.Current.MainPage.DisplayAlert("ERROR", "Usuario o Contraseña  Incorrecta...", "OK");
-            }
         }
 
         #endregion
-
 
 
     }
