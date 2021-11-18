@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows.Input;
+using Unidad3.Models;
 using Xamarin.Forms;
 
 namespace Unidad3.ViewModel
@@ -58,10 +59,24 @@ namespace Unidad3.ViewModel
         public async void LoginMethod()
         {
 
+            List<UserModel> ListUser = App.Db.ValidateUserModel(user, password).Result;
 
-            if(UserTxt == "ADMIN" && PasswordTxt == "12345")
+            UserModel Usr = App.Db.GetUserModel(user, password).Result;
+            
+
+            if(Usr == null)
             {
-                await Application.Current.MainPage.DisplayAlert("WELCOME", "Bienvenido...", "OK");
+
+            }
+            else
+            {
+
+            }
+
+            if(ListUser.Count > 0)
+            {
+                await Application.Current.MainPage.DisplayAlert("WELCOME", "Bienvenido... Aplicacion ", "OK");
+                await Application.Current.MainPage.Navigation.PushAsync(new Landing());
             }
             else
             {

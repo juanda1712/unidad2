@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"          
+             xmlns:views1="clr-namespace:Unidad3.Views"
+            NavigationPage.HasNavigationBar="False"
+            x:Class="Unidad3.ViewModel.Landing" BarBackgroundColor ="LightSteelBlue"  BarTextColor="White">
+  <!--Pages can be added as references or inline-->
+
+    <views1:LandTabAgenda Title="Agenda" IconImageSource="usr.png" ></views1:LandTabAgenda>
+    <views1:LandTab2 Title="Tab2" IconImageSource="" ></views1:LandTab2>
+
+</TabbedPage>

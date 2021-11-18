@@ -34,9 +34,14 @@ namespace Unidad3
         protected override void OnStart()
         {
 
-            List<UserModel> ListUsr = new List<UserModel>();
-            ListUsr = Db.GetUserModel().Result;
-                
+            //ContactosModel cont = new ContactosModel();
+            //cont.Imagen = "usr.png";
+            //cont.Nombre = "Juan David Lopez ";
+            //cont.Telefono = "3125263210";
+            //var resul = Db.SaveModelAsync<ContactosModel>(cont, true);
+
+            List<ContactosModel> ListUsr = Db.GetTableModel<ContactosModel>().Result;
+
 
         }
 
