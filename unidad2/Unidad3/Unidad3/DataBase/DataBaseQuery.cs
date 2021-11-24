@@ -34,7 +34,6 @@ namespace Unidad3.DataBase
             }
         }
 
-
         public Task<List<UserModel>> GetUserModel()
         {
             return _database.Table<UserModel>().ToListAsync();
@@ -44,7 +43,6 @@ namespace Unidad3.DataBase
         {
             return _database.Table<ContactosModel>().ToListAsync();
         }
-
 
         public Task<List<T>> GetTableModel<T>() where T : new()
         {
