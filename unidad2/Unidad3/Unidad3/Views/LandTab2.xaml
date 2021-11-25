@@ -4,9 +4,11 @@
              x:Class="Unidad3.Views.LandTab2">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+
+
+            <Button Style="{StaticResource btnAceptar}" Text="Camara"  Clicked="Button_Clicked"  ></Button>
+            
+            
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

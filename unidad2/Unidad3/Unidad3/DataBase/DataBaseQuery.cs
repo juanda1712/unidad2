@@ -60,6 +60,14 @@ namespace Unidad3.DataBase
                 return _database.InsertAsync(model);
             }
         }
+
+
+        public Task<int> DeleteModelAsync<T>(T model) where T : new()
+        {
+           
+                return _database.DeleteAsync(model);
+          
+        }
         public Task<List<T>> QueryModel<T>(string query) where T : new()
         {
             return _database.QueryAsync<T>(query);

@@ -7,6 +7,7 @@ using System.Windows.Input;
 using GalaSoft.MvvmLight.Command;
 using Xamarin.Forms;
 using Rg.Plugins.Popup.Services;
+using Plugin.Messaging;
 
 namespace Unidad3.ViewModel
 {
@@ -96,7 +97,31 @@ namespace Unidad3.ViewModel
             set { }
         }
 
+        public ICommand SmsCommand
+        {
+            get
+            {
+                return new RelayCommand(SmsMethod);
+            }
+            set { }
+        }
+        public ICommand CallCommand
+        {
+            get
+            {
+                return new RelayCommand(CallMethod);
+            }
+            set { }
+        }
 
+        public ICommand DeleteCommand
+        {
+            get
+            {
+                return new RelayCommand(DeleteContactMethod);
+            }
+            set { }
+        }
 
         #region Metodos
         public async Task LoadList()
@@ -104,7 +129,26 @@ namespace Unidad3.ViewModel
             this.ListViewSource =  await App.Db.GetTableModel<ContactosModel>();
         
         }
+        public async void SmsMethod()
+        {
+            var sms = CrossMessaging.Current.SmsMessenger;
+            if(sms.CanSendSms)
+            {
+                sms.SendSms(numero, "Xamarin UTP");
+                await PopupNavigation.Instance.PopAsync(true);
 
+            }
+        }
+
+        public async void CallMethod()
+        {
+            var call = CrossMessaging.Current.PhoneDialer;
+            if (call.CanMakePhoneCall)
+            {
+                call.MakePhoneCall(numero);
+                await PopupNavigation.Instance.PopAsync(true);
+            }
+        }
 
         public async void UpdateContactMethod()
         {
@@ -117,6 +161,22 @@ namespace Unidad3.ViewModel
 
             await App.Db.SaveModelAsync<ContactosModel>(contact, false);
             await Application.Current.MainPage.DisplayAlert("OK", " Actualización Exitosa", "OK");
+            await Application.Current.MainPage.Navigation.PushAsync(new Landing(), true);
+            await PopupNavigation.Instance.PopAsync(true);
+        }
+
+
+        public async void DeleteContactMethod()
+        {
+
+            var contact = new ContactosModel();
+            contact.Nombre = nombre;
+            contact.Telefono = numero;
+            contact.ContactID = id;
+            contact.Imagen = "usr.png";
+
+            await App.Db.DeleteModelAsync<ContactosModel>(contact);
+            await Application.Current.MainPage.DisplayAlert("OK", " Se elimino correctamente ", "OK");
             await Application.Current.MainPage.Navigation.PushAsync(new Landing(), true);
             await PopupNavigation.Instance.PopAsync(true);
         }

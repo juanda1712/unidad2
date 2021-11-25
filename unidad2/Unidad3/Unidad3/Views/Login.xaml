@@ -11,6 +11,7 @@
                     <RowDefinition Height="Auto" ></RowDefinition>
                     <RowDefinition Height="*" ></RowDefinition>
                     <RowDefinition Height="Auto" ></RowDefinition>
+                    <RowDefinition Height="Auto" ></RowDefinition>
                 </Grid.RowDefinitions>
 
 
@@ -23,15 +24,14 @@
                     <Entry Placeholder="Contraseña"  PlaceholderColor="SlateGray" 
                            TextColor="SlateGray"  Text="{Binding PasswordTxt, Mode=TwoWay}" ></Entry>
                     <Button Text="Iniciar Sesión" Command="{Binding LoginCommand}" BackgroundColor="White" Margin="0,15,0,0" CornerRadius="20" TextColor="#58AFDE" FontAttributes="Bold" FontSize="17"></Button>
-
-                    <StackLayout Orientation="Horizontal" Margin="15">
-                        <Label Text="¿Recuperar Contraseña?" TextColor="SlateGray" FontSize="17"></Label>
-                        <Button Text="Registrarse" Clicked="Button_Clicked" BackgroundColor="{StaticResource Aux1}"  TextColor="White" HorizontalOptions="EndAndExpand" FontSize="17"></Button>
-                    </StackLayout>
-
                 </StackLayout>
-
-                <Label Grid.Row="3"  Text="Programación móvil" TextColor="SlateGray" FontSize="27" FontAttributes="Bold" HorizontalTextAlignment="Center" Margin="0,50,0,0"></Label>
+                
+                <StackLayout  Grid.Row="2" Orientation="Horizontal" Margin="15">
+                    <Label Text="¿Recuperar Contraseña?" TextColor="SlateGray" FontSize="17"></Label>
+                    <Button Text="Registrarse" Clicked="Button_Clicked" BackgroundColor="{StaticResource Aux1}"  TextColor="White" HorizontalOptions="EndAndExpand" FontSize="17"></Button>
+                </StackLayout>
+                
+                <Label Grid.Row="3"  Text="Programación móvil" TextColor="SlateGray" FontSize="15" FontAttributes="Bold" HorizontalTextAlignment="Center" Margin="0,50,0,0"></Label>
             </Grid>
 
 
