@@ -3,19 +3,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Unidad3.ViewModel;
+
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace Unidad3.Views
+namespace Unidad3.Views.MaestroDetalle
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class NewContact : ContentPage
+    public partial class MenuLateralDetail : ContentPage
     {
-        public NewContact()
+        public MenuLateralDetail()
         {
             InitializeComponent();
-            BindingContext = new ContactosViewModal();
         }
     }
 }

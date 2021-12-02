@@ -7,8 +7,19 @@
 
 
             <Button Style="{StaticResource btnAceptar}" Text="Camara"  Clicked="Button_Clicked"  ></Button>
-            
-            
+
+            <Button Style="{StaticResource btnAceptar}" Text="Notifi"  Clicked="Notif_Clicked"  ></Button>
+
+            <Button Style="{StaticResource btnAceptar}" Text="Maestro Detalle"  Clicked="Master_Clicked"  ></Button>
+
+            <Button Style="{StaticResource btnAceptar}" Text="Get Chiste"   Command="{Binding GetData}" ></Button>
+
+            <StackLayout Orientation="Horizontal"  Spacing="10" Margin="20">
+                <Image Source="{Binding Icon_urlTxt}" HeightRequest="20"></Image>
+                <Editor HorizontalOptions="StartAndExpand" IsReadOnly="True" HeightRequest="150" WidthRequest="250" Text="{Binding Chistetxt}" ></Editor>
+                
+            </StackLayout>
+
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

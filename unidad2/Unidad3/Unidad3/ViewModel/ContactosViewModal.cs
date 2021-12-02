@@ -150,6 +150,55 @@ namespace Unidad3.ViewModel
             }
         }
 
+
+        public ICommand RegisterCommand
+        {
+            get
+            {
+                return new RelayCommand(RegisterMethod);
+            }
+        }
+
+        #endregion
+
+        #region Methods
+        private async void RegisterMethod()
+        {
+            if (string.IsNullOrEmpty(this.nombre))
+            {
+                await Application.Current.MainPage.DisplayAlert(
+                    "Error",
+                    "Por favor Ingrese su Nombre.",
+                    "Aceptar");
+                return;
+            }
+
+            if (string.IsNullOrEmpty(this.numero))
+            {
+                await Application.Current.MainPage.DisplayAlert(
+                    "Error",
+                    "Por favor Ingrese su Numero.",
+                    "Aceptar");
+                return;
+            }
+
+
+
+
+            var user = new ContactosModel();
+            user.Nombre = nombre;
+            user.Telefono = numero;
+            user.Imagen = "usr.png";
+            await App.Db.SaveModelAsync<ContactosModel>(user, true);
+
+            await Application.Current.MainPage.DisplayAlert("Exitoso", nombre.ToString() + " se registro exitosamente en la agenda", "Ok");
+            await Application.Current.MainPage.Navigation.PushAsync(new Landing(), true); ;
+
+
+
+
+        }
+
         public async void UpdateContactMethod()
         {
 

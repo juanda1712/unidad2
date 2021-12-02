@@ -3,10 +3,32 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Unidad3.Views.NewContact">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+        <StackLayout Margin="30" Spacing="2">
+            <StackLayout Margin="0,0,0,40">
+                <Image VerticalOptions="Center" 
+                       HorizontalOptions="Center" 
+                       HeightRequest="100"
+                       Source="usr.png"></Image>
+            </StackLayout>
+
+            <BoxView HeightRequest="1"  Color="Black" ></BoxView>
+
+
+            <StackLayout Spacing="5">
+                <Label x:Name="lblNombre"  Text="Nombre"></Label>
+                <Entry x:Name="etyNombre"   Text="{Binding NombreTxt}" Style="{StaticResource EtGeneral}" 
+                       Placeholder="Ingrese el nombre"></Entry>
+            </StackLayout>
+
+            <StackLayout Spacing="5">
+                <Label x:Name="lblNumero"  Text="Número"></Label>
+                <Entry x:Name="etyNumero"  Text="{Binding NumeroTxt}" Keyboard="Numeric" Style="{StaticResource EtGeneral}" 
+                       Placeholder="Ingrese el Número"></Entry>
+            </StackLayout>
+
+            <StackLayout  Spacing="5">
+                <Button Command="{Binding RegisterCommand}" Style="{StaticResource btnAceptar}"></Button>
+            </StackLayout>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
