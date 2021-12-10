@@ -47,7 +47,7 @@ namespace Unidad3.ViewModel
         {
             get
             {
-                return new RelayCommand(GetDataMethod);
+                return new RelayCommand(PostDataMethod);
             }
             set { }
         }
@@ -69,6 +69,53 @@ namespace Unidad3.ViewModel
             }
             else { }
         }
+
+        public async void GetListDataMethod()
+        {
+            string urlls = "https://jsonplaceholder.typicode.com/comments?postId=1";
+            var client = new HttpClient();
+            client.BaseAddress = new Uri(urlls);
+            var response = await client.GetAsync(client.BaseAddress);
+            response.EnsureSuccessStatusCode();
+
+            if (response.IsSuccessStatusCode)
+            {
+                var jsonResult = response.Content.ReadAsStringAsync().Result;
+                var objClient = JsonConvert.DeserializeObject<List<ClientModel>>(jsonResult);
+              
+            }
+            else { }
+        }
+
+
+        public async void PostDataMethod()
+        {
+            string urlpost = "https://jsonplaceholder.typicode.com/posts";
+            var client = new HttpClient();
+            PostClientModel objclient = new PostClientModel
+            {
+                userId = 0,
+                title = "Prueba",
+                body = "hola soy un post"
+
+            };
+            string strjson = JsonConvert.SerializeObject(objclient);
+            StringContent content = new StringContent(strjson, Encoding.UTF8, "application/json");
+
+            client.BaseAddress = new Uri(urlpost);
+            var response = await client.PostAsync(client.BaseAddress,content);
+            response.EnsureSuccessStatusCode();
+
+            if (response.StatusCode == System.Net.HttpStatusCode.Created)
+            {
+
+                var jsonResult = response.Content.ReadAsStringAsync().Result;
+                var objClient = JsonConvert.DeserializeObject<ClientModel>(jsonResult);
+
+            }
+            else { }
+        }
+
 
     }
 }
